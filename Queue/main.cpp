@@ -15,26 +15,19 @@ void search();
 
 
 
-
-
-
-
-
 int main() {
-    
-    
-   /* enqueue(5);
-    enqueue(7);
-    enqueue(1);
-    enqueue(2);
-    enqueue(3);
-
-    display();
-    
-    dequeue();
-    
-    display();
-    peek();*/
+    /* enqueue(5);
+     enqueue(7);
+     enqueue(1);
+     enqueue(2);
+     enqueue(3);
+     
+     display();
+     
+     dequeue();
+     
+     display();
+     peek();*/
     
     print();
     return 0;
@@ -82,8 +75,8 @@ void display(){
         cout << "Queue is Empty" << endl;
     }
     cout << endl;
-
-
+    
+    
 }
 int arr[SIZE];
 void copy(){
@@ -92,38 +85,38 @@ void copy(){
     }
     
     for (int i = front ; i <= rear ; i++){
-       cout  <<" " << arr[i] <<" " ;
+        cout  <<" " << arr[i] <<" " ;
     }
-
+    
 }
 
 void peek(){
     cout << endl;
     if ( front != -1 && rear != -1 && front <= rear){
-            cout <<"The last value is : "<< queue[rear] <<" ";
+        cout <<"The last value is : "<< queue[rear] <<" ";
     }
     else {
         cout << "Queue is Empty" << endl;
     }
     cout << endl;
-
-
+    
+    
 }
 
 void print(){
     char c;
     int y;
     bool o=1;
-
+    
     while(o ==1 ){
-
+        
         if ( o== 1){
             cout << endl;
             cout << "if you want to add Write 1 " << endl<<"if you want to Remove Write 2 " << endl<<"if you want to see the last value Write 3 " << endl<<"if you want to see all value Write 4 "<< endl << "if you want to search Write 5 " << "Write 6 to print copy array "<< endl<< ": ";
             cin >> c;
             
             switch (c) {
-
+                    
                 case '1':
                     cout <<"Enter the value you want to add : ";
                     cin >>y;
@@ -144,20 +137,21 @@ void print(){
                 case '6':
                     copy();
                     break;
-
+                    
                 default:
                     cout << "The number you entered is incorrect" << endl;
                     break;
             }
         }
-        else{
+        else {
             break;
+            
         }
         cout << endl;
         cout << "Enter 1 To continue , 0 to  Exit : ";
-
-        cin >>o;
-
+        
+        cin >> o;
+        
     }
     
 }
@@ -178,6 +172,6 @@ void search(){
             }
         }
         cout << "Do you want to search for something else? yes or no : ";
-        cin >>p;
+        cin >> p;
     }
 }
